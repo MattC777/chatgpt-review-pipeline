@@ -16,7 +16,7 @@ def get_conn():
     try:
         return snowflake.connector.connect(
             user=os.environ["SNOWFLAKE_USER"],            # MATTCAO2001
-            password=os.environ["SNOWFLAKE_PASSWORD"],    # 你的密码
+            password=os.environ["SNOWFLAKE_PASSWORD"],    
             account=os.environ["SNOWFLAKE_ACCOUNT"],      # SIZZFYK-QAC52864
             role=os.environ.get("SNOWFLAKE_ROLE", "SYSADMIN"),
             warehouse=os.environ.get("SNOWFLAKE_WAREHOUSE", "COMPUTE_WH"),
