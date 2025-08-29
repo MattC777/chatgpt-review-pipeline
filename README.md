@@ -61,7 +61,7 @@ chatgpt-review-pipeline/
 ### 1. Extract — `scripts/scrape.py`
 - Uses **`google-play-scraper`** to fetch reviews.  
 - Saves results as `data/raw_YYYY-MM-DD.csv`.  
-- Incremental strategy: fetches only the last day’s reviews.  
+- Fetches only the last day’s reviews.  
 
 ### 2. Load — `scripts/load_to_snowflake.py`
 - Reads the latest CSV.  
@@ -75,7 +75,7 @@ chatgpt-review-pipeline/
 
 ---
 
-## Data Model
+## Snowflake Output
 
 - **Staging Layer**  
   - `STAGING.RAW_REVIEWS`: raw scraped data.  
@@ -115,8 +115,6 @@ All credentials are stored as **GitHub Secrets** (not in repo):
 - `SNOWFLAKE_WAREHOUSE`  
 - `SNOWFLAKE_DATABASE`  
 - `SNOWFLAKE_SCHEMA`  
-
-This ensures the CI pipeline can connect to Snowflake securely.
 
 ---
 
