@@ -24,7 +24,7 @@ The pipeline runs daily using **GitHub Actions** and stores data in **Snowflake*
 
 ```text
           ┌───────────────────┐
-          │ GitHub Actions CI │  (daily / manual trigger)
+          │ GitHub Actions CI │  (daily / manual trigger: It is daily automatic, but you can manually scrape reviews whenerver you like)
           └─────────┬─────────┘
                     │
           1 Extract │  scripts/scrape.py
@@ -90,7 +90,7 @@ chatgpt-review-pipeline/
 
 - **Tool**: GitHub Actions (`.github/workflows/daily-pipeline.yml`)  
 - **Triggers**:
-  - Cron: `0 11 * * *` → daily at **11:00 UTC** (19:00 Beijing)  
+  - Cron: `0 11 * * *` → daily at **11:00 UTC** (7:00 A.M. New York)  
   - Manual: `workflow_dispatch`  
 
 **Pipeline steps**:
