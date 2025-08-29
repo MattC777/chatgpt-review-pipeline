@@ -120,12 +120,6 @@ All credentials are stored as **GitHub Secrets** (not in repo):
 
 ## Validation and Monitoring
 
-- **Logs**:  
-  Check GitHub Actions run logs for:  
-  - `Run scraper`: review count written.  
-  - `Load to Snowflake`: rows loaded.  
-  - `Transform in Snowflake`: SQL executed OK.  
-
 - **Verification queries in Snowflake**:
   ```sql
   USE DATABASE REVIEWS;
