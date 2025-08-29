@@ -82,7 +82,8 @@ chatgpt-review-pipeline/
 
 - **Analytics Layer**  
   - `ANALYTICS.REVIEWS_CLEAN`: cleaned, standardized data.  
-  - `ANALYTICS.V_RECENT_7D`: last 7 days of cleaned reviews.  
+  - `ANALYTICS.V_RECENT_7D`: last 7 days of cleaned reviews.
+- ![Snowflake Output Demonstration](Snowflake_Output.png)
 
 ---
 
@@ -91,7 +92,8 @@ chatgpt-review-pipeline/
 - **Tool**: GitHub Actions (`.github/workflows/daily-pipeline.yml`)  
 - **Triggers**:
   - Cron: `0 11 * * *` → daily at **11:00 UTC** (7:00 A.M. New York)  
-  - Manual: `workflow_dispatch`  
+  - Manual: `workflow_dispatch`
+- - ![GitHub Action Demonstration](GitHub_Actions.png.png)
 
 **Pipeline steps**:
 1. Checkout repo.  
