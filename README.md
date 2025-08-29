@@ -93,7 +93,7 @@ chatgpt-review-pipeline/
 - **Triggers**:
   - Cron: `0 11 * * *` → daily at **11:00 UTC** (7:00 A.M. New York)  
   - Manual: `workflow_dispatch`
-- - ![GitHub Action Demonstration](GitHub_Actions.png.png)
+- - ![GitHub Action Demonstration](GitHub_Actions.png)
 
 **Pipeline steps**:
 1. Checkout repo.  
