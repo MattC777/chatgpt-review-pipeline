@@ -4,3 +4,4 @@ python-dotenv
 snowflake-connector-python
 snowflake-sqlalchemy
 pyarrow<19
+scikit-learn
