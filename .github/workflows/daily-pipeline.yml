@@ -62,6 +62,23 @@ jobs:
           SNOWFLAKE_SCHEMA: ${{ secrets.SNOWFLAKE_SCHEMA }}
         run: python scripts/run_transform.py
 
+      - name: Pain-points analysis (ANALYTICS)
+        env:
+          SNOWFLAKE_USER:       ${{ secrets.SNOWFLAKE_USER }}
+          SNOWFLAKE_PASSWORD:   ${{ secrets.SNOWFLAKE_PASSWORD }}
+          SNOWFLAKE_ACCOUNT:    ${{ secrets.SNOWFLAKE_ACCOUNT }}
+          SNOWFLAKE_ROLE:       ${{ secrets.SNOWFLAKE_ROLE }}
+          SNOWFLAKE_WAREHOUSE:  ${{ secrets.SNOWFLAKE_WAREHOUSE }}
+          SNOWFLAKE_DATABASE:   ${{ secrets.SNOWFLAKE_DATABASE }}         # e.g. REVIEWS_PIPELINE
+          SNOWFLAKE_SCHEMA:     ${{ secrets.SNOWFLAKE_SCHEMA_ANALYTICS }} # 这一步用 ANALYTICS
+        run: |
+          echo "Running daily topic analysis..."
+          python scripts/analyze_painpoints.py
+
+
+
+      
+
       - name: Upload CSV artifact (optional)
         uses: actions/upload-artifact@v4
         with:
